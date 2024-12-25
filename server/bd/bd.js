@@ -1,5 +1,5 @@
 require('dotenv').config(); // Cargar el archivo .env
-//const {DB_HOST, DB_NAME, DB_PASSWORD, DB_PORT, DB_USER, DB_CONNECTION_LIMIT} =require('../config')
+
 const mysql = require('mysql2');
 
 const poolConnection = mysql.createPool({
