@@ -13,14 +13,6 @@ const poolConnection = mysql.createPool({
     queueLimit: 0
 });
 
-poolConnection.getConnection((err, connection) => { 
-    if (err) { 
-        console.error('Error al conectar a la base de datos:', err); 
-    } else { 
-        console.log('Conexión a la base de datos exitosa.'); 
-        connection.release(); 
-    }
-})
 
 module.exports = {
     conn: poolConnection.promise(),
