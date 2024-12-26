@@ -16,7 +16,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 app.use(cors({ 
-    origin: ['http://localhost:3000', 'https://rmareact-front.onrender.com'], 
+    origin: [
+        'http://localhost:3000', 
+        'https://rmareact-front.onrender.com', 
+        'https://rma-react-server.vercel.app'], 
     credentials: true, 
 }));
 app.use(cookieParser());
