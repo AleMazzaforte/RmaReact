@@ -4,9 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import Swal from 'sweetalert2';
 
 // Determinar la URL de la API según la url
-const url = window.location.hostname === 'localhost'
-  ? 'http://localhost:8080'
-  : 'https://rmareact-front.onrender.com';
+let url = 'https://rmareact-front.onrender.com'
+ 
+if (window.location.hostname === 'localhost') {
+  url = 'http://localhost:8080';
+}
+
+
+
 
 function App() {
   const [formData, setFormData] = useState({

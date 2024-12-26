@@ -15,7 +15,10 @@ app.use(express.static(path.join(__dirname, 'public')));
 // Middleware para procesar formularios
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(cors());
+app.use(cors({ 
+    origin: ['http://localhost:3000', 'https://rmareact-front.onrender.com'], 
+    credentials: true, 
+}));
 app.use(cookieParser());
 // Usar las rutas importadas
 app.use('/', rutas);
