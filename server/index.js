@@ -26,7 +26,7 @@ app.use(cookieParser());
 // Usar las rutas importadas
 app.use('/', rutas);
 
-app.use('/', (req, res) => {
+app.get('/', (req, res) => {
     res.send('Servidor corriendo');
 })
 
